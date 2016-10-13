@@ -9,8 +9,12 @@ import { SignupPage } from '../signup/signup';
 })
 export class HomePage {
   private navCtrl;
-  constructor(public navCtrl: NavController){
+  data : any;
+  constructor(public navCtrl: NavController, private http: Http){
     this.navCtrl = navCtrl;
+    this.data = {};
+    this.data.email = "";
+    this.data.password = "";
   }
 
   navigate(){
@@ -19,6 +23,19 @@ export class HomePage {
       firstPassed: "Value 1",
       secondPassed: "Value 2",
     });
+  }
+
+  login() {
+    let email = this.data.email;
+    let password = this.data.password;
+    let data = JSON.stringify({email, password});
+    let link = "http://"
+
+    this.http.post(link,data).subscribe(data=>{
+            console.log("success");
+        },error => {
+            console.log("error huh!");
+        });
   }
 
 }
