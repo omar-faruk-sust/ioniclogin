@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, NavController } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
+
   rootPage = HomePage;
 
   constructor(platform: Platform) {

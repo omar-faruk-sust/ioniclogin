@@ -8,16 +8,16 @@ import { NavController, NavParams } from 'ionic-angular';
   Ionic pages and navigation.
 */
 @Component({
-  //selector: 'page-signup',
-  templateUrl: '../signup/signup.html'
+  selector: 'page-signup',
+  templateUrl: '../signup/signup.html',
+  entryComponents:[ SignupPage ]
 })
 
 export class SignupPage {
-
   public firstParam:any;
   public secondParam:any;
 
-  constructor(public navCtrl: NavController,  params: NavParams) {
+  constructor(public navCtrl: NavController,  public params: NavParams) {
     this.firstParam = params.get("firstPassed");
     this.secondParam = params.get("secondPassed");
   }

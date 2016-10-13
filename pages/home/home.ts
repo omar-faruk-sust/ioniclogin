@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {SignupPage} from '../signup/signup';
+import { SignupPage } from '../signup/signup';
 
 
 @Component({
@@ -8,16 +8,17 @@ import {SignupPage} from '../signup/signup';
   templateUrl: '../home/home.html'
 })
 export class HomePage {
-
+  private navCtrl;
   constructor(public navCtrl: NavController){
-
+    this.navCtrl = navCtrl;
   }
 
-  naviagte(){
+  navigate(){
+  console.log('here');
     this.navCtrl.push(SignupPage,{
       firstPassed: "Value 1",
       secondPassed: "Value 2",
-    })
+    });
   }
 
 }
