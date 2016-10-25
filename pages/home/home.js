@@ -10,8 +10,13 @@ var signup_1 = require('../signup/signup');
 var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
+        this.navCtrl = navCtrl;
+        this.data = {};
+        this.data.email = "";
+        this.data.password = "";
     }
-    HomePage.prototype.naviagte = function () {
+    HomePage.prototype.navigate = function () {
+        console.log('here');
         this.navCtrl.push(signup_1.SignupPage, {
             firstPassed: "Value 1",
             secondPassed: "Value 2"

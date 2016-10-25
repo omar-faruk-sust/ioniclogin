@@ -9,8 +9,7 @@ import { NavController, NavParams } from 'ionic-angular';
 */
 @Component({
   selector: 'page-signup',
-  templateUrl: '../signup/signup.html',
-  entryComponents:[ SignupPage ]
+  templateUrl: '../signup/signup.html'
 })
 
 export class SignupPage {

@@ -15,12 +15,13 @@ var core_1 = require('@angular/core');
 var SignupPage = (function () {
     function SignupPage(navCtrl, params) {
         this.navCtrl = navCtrl;
+        this.params = params;
         this.firstParam = params.get("firstPassed");
         this.secondParam = params.get("secondPassed");
     }
     SignupPage = __decorate([
         core_1.Component({
-            //selector: 'page-signup',
+            selector: 'page-signup',
             templateUrl: '../signup/signup.html'
         })
     ], SignupPage);

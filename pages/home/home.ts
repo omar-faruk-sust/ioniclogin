@@ -10,7 +10,7 @@ import { SignupPage } from '../signup/signup';
 export class HomePage {
   private navCtrl;
   data : any;
-  constructor(public navCtrl: NavController, private http: Http){
+  constructor(public navCtrl: NavController){
     this.navCtrl = navCtrl;
     this.data = {};
     this.data.email = "";
@@ -25,17 +25,17 @@ export class HomePage {
     });
   }
 
-  login() {
-    let email = this.data.email;
-    let password = this.data.password;
-    let data = JSON.stringify({email, password});
-    let link = "http://"
-
-    this.http.post(link,data).subscribe(data=>{
-            console.log("success");
-        },error => {
-            console.log("error huh!");
-        });
-  }
+  // login() {
+  //   let email = this.data.email;
+  //   let password = this.data.password;
+  //   let data = JSON.stringify({email, password});
+  //   let link = "http://"
+  //
+  //   this.http.post(link,data).subscribe(data=>{
+  //           console.log("success");
+  //       },error => {
+  //           console.log("error huh!");
+  //       });
+  // }
 
 }
